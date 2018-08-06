@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
     //selector - селектор css
     // template - шаблон Html
     selector: 'my-app',
-    template: `<label>Add name:</label> 
-                <input [(ngModel)]="name" placeholder="name">
-                <h1>You are welcome {{name}}!</h1>`
+    template: `<child-component [userName]="name" [userAge]="age"></child-component>
+               <input type="text" [(ngModel)]="name">`
 })
-
+//export - give posibility to use this class in another modules
 export class AppComponent {
-    name = '';
+    name: string = 'Petr';
+    age: number = 44;
 }

@@ -64,7 +64,15 @@ class Item {
                         </tbody>
                     </table>
                     
-                </div>`
+                </div>`,
+    styles: [` 
+            h1 {color:navy; font-size:23px; padding-left: 10px;}
+            :host {
+                font-family: Verdana;
+                color: #555;
+                font-size:15px;
+            }
+    `]
 })
 
 export class AppComponent {
@@ -78,5 +86,7 @@ export class AppComponent {
         if(text==null || text.trim()=="" || price==null)
             return;
         this.items.push(new Item(text, price));
+        text = '';
+        price = undefined;
     }
 }
