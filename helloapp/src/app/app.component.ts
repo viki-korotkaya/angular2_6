@@ -6,11 +6,16 @@ import { Component } from '@angular/core';
     //selector - селектор css
     // template - шаблон Html
     selector: 'my-app',
-    template: `<child-component [userName]="name" [userAge]="age"></child-component>
-               <input type="text" [(ngModel)]="name">`
+    template: `<child-component [userName]="name" [userAge]="age" (onChanged)="onChanged($event)"></child-component>
+               <input type="text" [(ngModel)]="name"><br>
+               <h2>Clicknumbers: {{clicks}}</h2>`
 })
 //export - give posibility to use this class in another modules
 export class AppComponent {
     name: string = 'Petr';
     age: number = 44;
+    clicks:number = 0;
+    onChanged(increased:any){
+        increased==true?this.clicks++:this.clicks--;
+    }
 }
