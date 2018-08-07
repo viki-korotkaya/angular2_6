@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heaps</title>
+</head>
+<body>
+    <h1>Place for Angular exercises</h1>
+    <child-comp [(userName)]="name"></child-comp>
+    <div>Выбранное имя: {{name}}</div>
+    <template-component #counter></template-component>
+    <button (click)="counter.increment()">+</button>
+    <button (click)="counter.decrement()">-</button>
+
+</body>
+</html>

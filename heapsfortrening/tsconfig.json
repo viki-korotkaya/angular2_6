@@ -1,0 +1,22 @@
+//settings for compiler TS
+{
+  //  poptions of compilation
+  "compilerOptions": {
+    "module": "es5",
+    "target": "es5",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "node_modules/@types/"
+    ]
+  },
+  //  exclude from compilation field node_modules
+  "exclude": [
+    "node_modules"
+  ]
+}
