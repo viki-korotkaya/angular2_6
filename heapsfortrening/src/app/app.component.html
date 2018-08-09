@@ -7,7 +7,7 @@
 <body>
     <h1 [ngClass]="{title: true}">Place for Angular exercises</h1>
     <child-comp [(userName)]="name"></child-comp>
-    <div bold>Выбранное имя: {{name}}</div>
+    <p bold [selectedSize]="'12px'" [defaultSize]="'9px'">Выбранное имя: {{name}}</p>
     <template-component #counter></template-component>
     <button (click)="counter.increment()">+</button>
     <button (click)="counter.decrement()">-</button>
