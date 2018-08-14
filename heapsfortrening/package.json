@@ -2,7 +2,7 @@
   "name": "helloapp",
   "version": "1.0.0",
   "description": "First Angular 5 Project",
-  "author": "Eugene Popov <metanit.com>",
+  "author": "Viktoryia Karotkaya",
   "scripts": {
     "dev": "webpack-dev-server --hot --open",
     "build": "webpack"
