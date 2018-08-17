@@ -2,6 +2,7 @@
 // Директива import - импортирует функциональность модуля angular/core
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "./data.service";
+import {LogService} from "./log.service";
 import{Phone} from "./phone";
 
 // функция-декоратор @Component - ассоциирует метаданные с кдассом компонента AppComponent
@@ -42,7 +43,7 @@ import{Phone} from "./phone";
             </tbody>
         </table>
     </div>`,
-    providers: [DataService]
+    providers: [DataService, LogService]
 })
 //export - give posibility to use this class in another modules
 export class AppComponent implements OnInit {
